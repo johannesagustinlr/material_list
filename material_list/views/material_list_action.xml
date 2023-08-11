@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="material_list_action_id" model="ir.actions.act_window">
+            <field name="name">Material List</field>
+            <field name="res_model">material.list</field>
+        </record>
+
+        <record id="material_list_action_tree_view_id" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="material_list.material_list_tree_view_id"/>
+            <field name="act_window_id" ref="material_list.material_list_action_id"/>
+        </record>
+    </data>
+</odoo>

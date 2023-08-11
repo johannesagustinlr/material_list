@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_material_list_search" model="ir.ui.view">
+        <field name="name">material_list_view_search</field>
+        <field name="model">material.list</field>
+        <field name="arch" type="xml">
+            <search string="Material List">
+                <field name="name" string="Material"/>
+                <filter string="Material Type Fabric" name="material_type" domain="[('material_type','=','fabric')]"/>
+                <filter string="Material Type Jeans" name="material_type" domain="[('material_type','=', 'jeans')]"/>
+                <filter string="Material Type Cotton" name="material_type" domain="[('material_type','=', 'cotton')]"/>
+            </search>
+        </field>
+    </record>
+
+  
+
+
+    <record id="material_list_tree_view_id" model="ir.ui.view">
+        <field name="name">material_list_tree_view_id</field>
+        <field name="model">material.list</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="material_code"/>
+                <field name="material_type"/>
+                <field name="material_price"/>
+                <field name="supplier_id"/>
+            </tree>
+        </field>
+    </record>
+
+    
+
+
+</odoo>
